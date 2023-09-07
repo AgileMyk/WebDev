@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Gentium, 'Arial-Black', Gadget, sans-serif;
+    src: url('Gentium.woff') format('woff'),
+         url('Gentium.ttf') format('truetype'),
+         url('Gentium-bold.woff') format('woff'),
+         url('Gentium-bold.ttf') format('truetype');
+         font-weight: bold;
+}
+
+p {
+    font-style: oblique;
+    font-size: 20px;
+}
+
+style li {
+    list-style-type: armenian;
+}

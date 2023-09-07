@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+*:before, *:after, * {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* color */
+/* typography */
+header {
+  width: 100vw;
+  height: 2em;
+  font-size: 10px;
+  padding: 0.5rem;
+  background-color: #0a0908;
+  color: #f4f3ee;
+  align-items: center;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  background-color: #0a0908;
+  line-height: 1em;
+}
+
+li {
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #f4f3ee;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,44 @@
+*:before, *:after, * {
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+
+} 
+
+/* color */
+$colors: (
+    black: #0a0908,
+    dark-gray: #22333b,
+    dark-brown: #5e503f,
+    tan: #c6ac8f,
+    light-tan: #eae0d5,
+    white-gray: #727272
+);
+
+/* typography */
+
+header {
+    width: 100vw;
+    height: 2em;
+    font-size: 10px;
+    padding: .5rem;
+    background-color: map-get(colors, $black);
+    color: $white-gray;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    line-height: 1em;
+}
+
+li {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: map-get(colors, $white-gray);
+}
