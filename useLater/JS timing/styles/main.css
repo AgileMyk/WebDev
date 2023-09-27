@@ -1,0 +1,165 @@
+/* COLORS */
+
+:root {
+    --main-dark-brown: #231f1e;
+    --main-light-brown: #bf7248;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+    font-weight: normal;
+}
+
+body {
+    font-size: 10px;
+    min-height: 100vh;
+}
+
+
+/* LISTS */
+ul, ol {
+    list-style: none;
+}
+
+li, link {
+  font-weight: 300;
+  font-size: 1.25rem;
+  
+}
+
+li::marker {
+    color: transparent;
+}
+
+/* LINKS */
+
+a:link {
+    color: #fff;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: var(--main-dark-brown);
+}
+
+header, nav, main, .sub-nav-paragraphs, footer {
+    max-width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(199, 160, 108);
+    background-color: var(--main-dark-brown);
+    
+}
+
+.heading-container {
+    height: 5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    vertical-align: baseline;
+}
+
+header h1 {
+    font-size: 3rem;
+    padding-right: 2rem;
+}
+
+header h1:first-of-type {
+    margin-top: 2.5%;
+
+}
+
+nav {
+    display: flex;
+    height: 2rem;
+    justify-content: space-around;
+    padding: 0 10%;
+    background-color: var(--main-light-brown);
+}
+
+nav li {
+    position: relative;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+nav a:hover {
+
+}
+
+main {
+    min-height: 80vh;
+}
+
+.sub-nav-paragraphs {
+    display: flex;
+    flex-direction: row;
+    gap: 5.5%;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.monthly-sub-heading {
+    color: var(--main-light-brown);
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.monthly-sub-heading::before {
+    content: "August";
+}
+
+.sub-nav-paragraphs p {
+    font-size: 1rem;
+    line-height: 130%;
+}
+
+.sub-nav-paragraphs div:first-of-type {
+    grid-column: 1 / 2;
+}
+
+.sub-nav-paragraphs div:nth-of-type(4) {
+    grid-column: 3 / 4;
+}
+
+.sub-nav-paragraphs div:last-of-type {
+    grid-column: 4 / 5;
+}
+
+.calender {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(211,211,211,.8);
+}
+
+#calender_head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#calender_head tr {
+    width: 100%;
+
+}
+
+#calender_table {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 3px 3px 6px rgba(0,0,0,.3);
+    border: 1px solid black;
+}
+
+thead, tr {
+    width: 100%;
+}
+
+footer {
+    height: 7rem;
+    background-image: linear-gradient(180deg, var(--main-light-brown), var(--main-dark-brown));
+}
