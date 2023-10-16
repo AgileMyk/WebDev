@@ -15,18 +15,6 @@ Worked Example
 # Return the string of characters.
 */
 
-function neutralise(s1, s2) {
-    let s3 = '';
-    for (let i = 0; i < s1.length; i++) {
-      if (s1[i] == s2[i]) {
-        s3 += s1[i]
-      } else {
-        s3+='0'
-      }
-    }
-    return s3;
-  }
-
   function neutralise(s1, s2) {
     let res = "";
     for(let i = 0; i < s1.length; i++) {
@@ -34,3 +22,4 @@ function neutralise(s1, s2) {
     }
     return res;
   }
+

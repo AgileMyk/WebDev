@@ -22,7 +22,7 @@ function maskify(cc) {
   }
 
   //------------------------------------------//
-  //   THIS HAS HIGHEST BEST PRACTICE RATING  //
+
   function maskify(cc) {
     return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
   }
@@ -34,6 +34,7 @@ function maskify(cc) {
   }
 
   //------------------------------------------//
+  //   THIS HAS HIGHEST BEST PRACTICE RATING  //
 
   function maskify(cc) {
   return cc.slice(-4).padStart(cc.length,'#')

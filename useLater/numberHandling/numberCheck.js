@@ -3,3 +3,4 @@
 
 
 numberP = value => typeof value == 'number' || parseInt(value);
+
