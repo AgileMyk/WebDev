@@ -58,7 +58,7 @@ let cars = [
   cars.reduce(plater, {}); // plater is the function, an empty object
                            // is the starting 'value'
 
-plater = function(stored, current) {   //begin with an empty object
+export var plater = function(stored, current) {   //begin with an empty object
     stored = { ...stored,              //spread whatever stored exists
              [current.licensePlate]:   //target the mapping identifier value
              current}                  //lay out the remaing object data   
