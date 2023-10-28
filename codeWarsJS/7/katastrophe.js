@@ -45,3 +45,31 @@ function strongEnough(earthquake, age) {
   }
 
 
+//modular && value-check
+
+function product(arr) {
+	if (arr.length == 0) { return 0; }
+  return arr.reduce(function (x, y) { return x * y });
+}
+
+function sum(arr) {
+	if (arr.length == 0) { return 0; }
+  return arr.reduce(function (x, y) { return x + y });
+}
+
+function strength(years, decPerYear, initStrength) {
+	if (decPerYear == undefined) { decPerYear = 1 };
+  if (initStrength == undefined) { initStrength = 1000 };
+  for (var i = 0; i < years; i++) {
+ 		initStrength *= 0.99;
+  }
+  return initStrength;
+}
+
+function strongEnough(earthquake, age) {
+	if(strength(age) >= product(earthquake.map(sum))){
+  	return "Safe!";
+  } else {
+  	return "Needs Reinforcement!";
+  }
+}
