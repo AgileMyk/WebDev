@@ -19,3 +19,7 @@ function* generator(a) {
       b++;
     }
   }
+
+  function* generator(a, b=1) {
+    while(true) yield `${a} x ${b} = ${a*b++}`;
+  }
