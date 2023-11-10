@@ -28,6 +28,26 @@ const playerSelection = function() {
 const computerSelection = getComputerChoice;
 
 const playRound = function(playerSelection, computerSelection) {
-    return `${playerSelection} : ${computerSelection}`;
+        let outcome;
+            if (playerSelection == 'Rock' && computerSelection == 'Rock' ||
+                playerSelection == 'Paper' && computerSelection == 'Paper' ||
+                playerSelection == 'Scissors' && computerSelection == 'Scissors') {
+                    outcome == 'draw';
+    } else if (playerSelection == 'Rock' && computerSelection == 'Scissors' ||
+               playerSelection == 'Scissors' && computerSelection == 'Paper' ||
+               playerSelection == 'Paper' && computerSelection == 'Rock') {
+                     outcome = 'you win';
+    } else if (playerSelection == 'Rock' && computerSelection == 'Paper' ||
+                playerSelection == 'Scissors' && computerSelection == 'Rock' ||
+                playerSelection == 'Paper' && computerSelection == 'Scissors') {
+                    outcome = 'you lose';
+    } else {
+        outcome = 'error';
+        return;
+    }
 }
 
+
+function askRounds() {
+
+}
