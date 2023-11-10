@@ -6,7 +6,10 @@ const getComputerChoice = function() {
 }
 
 const playerSelection = function() {
-
+    Rock = /rock/i;
+    Paper = /paper/i;
+    Scissors = /scissors/i;
+    let result;
     while (!Rock.test(result) && !Paper.test(result) && !Scissors.test(result)) { 
         let selection = prompt("Please make your choice (rock, paper, or scissors");
         if (Rock.test(selection)) {         
@@ -15,7 +18,9 @@ const playerSelection = function() {
             result = 'Paper';     
         } else if (Scissors.test(selection)) {         
             result = 'Scissors';     
-        }     
+        } else {
+            return playerSelection();
+        }
         return result; 
     }
 }
