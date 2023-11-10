@@ -6,10 +6,10 @@ const getComputerChoice = function() {
 }
 
 const playerSelection = function() {
+    let result;
     Rock = /rock/i;
     Paper = /paper/i;
     Scissors = /scissors/i;
-    let result;
     while (!Rock.test(result) && !Paper.test(result) && !Scissors.test(result)) { 
         let selection = prompt("Please make your choice (rock, paper, or scissors");
         if (Rock.test(selection)) {         
@@ -27,23 +27,21 @@ const playerSelection = function() {
 
 const computerSelection = getComputerChoice;
 
-const playRound = function(playerSelection, computerSelection) {
-        let outcome;
-            if (playerSelection == 'Rock' && computerSelection == 'Rock' ||
-                playerSelection == 'Paper' && computerSelection == 'Paper' ||
-                playerSelection == 'Scissors' && computerSelection == 'Scissors') {
-                    outcome == 'draw';
-    } else if (playerSelection == 'Rock' && computerSelection == 'Scissors' ||
-               playerSelection == 'Scissors' && computerSelection == 'Paper' ||
-               playerSelection == 'Paper' && computerSelection == 'Rock') {
-                     outcome = 'you win';
-    } else if (playerSelection == 'Rock' && computerSelection == 'Paper' ||
-                playerSelection == 'Scissors' && computerSelection == 'Rock' ||
-                playerSelection == 'Paper' && computerSelection == 'Scissors') {
-                    outcome = 'you lose';
+const playRound = function() {
+    let comp = computerSelection();
+    let player = playerSelection();
+    if (player == comp) {
+        return 'draw';
+    } else if (player == 'Rock' && comp == 'Paper' ||
+               player == 'Scissors' && comp == 'Rock' ||
+               player == 'Paper' && comp == 'Scissors') {
+        return 'loss';
+    } else if (player == 'Rock' && comp == 'Scissors' ||
+               player == 'Scissors' && comp == 'Paper' ||
+               player == 'Paper' && comp == 'Rock') {
+        return 'win';
     } else {
-        outcome = 'error';
-        return;
+        return 'error';
     }
 }
 
