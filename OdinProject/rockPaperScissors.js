@@ -48,6 +48,7 @@ const playRound = function() {
 
 function askRounds() {
     let numOfRounds = prompt('How many rounds would you like to play?');
+    return numOfRounds;
 }
 
 playGame = function() {
@@ -58,12 +59,12 @@ playGame = function() {
         let result = playRound();
         if (result == 'loss') {
             losses++;
-            count --;
+            rounds --;
         } else if (result == 'win') {
             wins++;
-            count --;
+            rounds --;
         } else {
-            count --;
+            rounds --;
         }
     }
 }
