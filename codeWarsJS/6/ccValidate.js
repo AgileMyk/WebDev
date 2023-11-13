@@ -38,20 +38,15 @@ the original credit card number is valid.
 */
 
 function validate(n){
-    let num2 = [];
     num = n.toString().split("");
     if (num.length % 2 == 0) {
-        for (let i = 0; i <= num.length; i++) {
-        if (i % 2 != 0) {
-            num2.push(num[i] *=2);
-          }
-      }
+        for (let i = 0; i < num.length; i++) {
+            i % 2 == 0 ? num[i] = num[i] * 2 : num[i];
+        } 
     } else {
-        for (let i = 0; i <= num.length; i++) {
-        if (i % 2 == 0) {
-            num2.push(num[i] *=2);
-          }
-      }
+        for (let i = 0; i < num.length; i++) {
+            i % 2 != 0 ? num[i] = num[i] * 2 : num[i];
+        }
     }
     num2 = num2.map( x => x > 9 ? x -= 9 : x);
     num2.reduce( (x,y) => x + y);
