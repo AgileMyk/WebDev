@@ -14,15 +14,23 @@ Kata.sumMul(4, -7)  // throws IllegalArgumentException
 import java.util.ArrayList;
 
 public class Kata {
-    public static long sumMul(int n, int m) {
-      int total = 0;
-      int result = n;
-      while (result < m) {
-        System.out.println("total: " + total);
-        total += result;
-        System.out.println("result: " + result);
-        result +=n;
-      }
-      return total;
-      }
-}
+      public static long sumMul(int n, int m) {
+        if (n <= 0 || m <= 0) {
+          throw new IllegalArgumentException("n and m must be greater than 0");
+        }
+        int total = 0;
+        int result = n;
+        try {
+          while (result < m) {
+            System.out.println("total: " + total);
+            total += result;
+            System.out.println("result: " + result);
+            result +=n;
+          }
+        } catch (IllegalArgumentException e) {
+            System.out.printf("Either variable n or variable m were not int values or they are less than 1: /n ${e}");
+          } 
+        return total;
+      } 
+  }
+
