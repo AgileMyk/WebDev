@@ -11,3 +11,18 @@ Kata.sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
 Kata.sumMul(4, -7)  // throws IllegalArgumentException
 */
 
+import java.util.ArrayList;
+
+public class Kata {
+    public static long sumMul(int n, int m) {
+      int total = 0;
+      int result = n;
+      while (result < m) {
+        System.out.println("total: " + total);
+        total += result;
+        System.out.println("result: " + result);
+        result +=n;
+      }
+      return total;
+      }
+}
